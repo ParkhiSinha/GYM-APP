@@ -20,9 +20,7 @@ const Contact = () => {
           email,
           message,
         },
-        {
-          headers: {  "Content-Type": "application/json", },
-        }
+    
       );
       setName("");
       setEmail("");
