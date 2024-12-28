@@ -3,16 +3,11 @@ import express from "express";
 import cors from "cors";
 import { sendEmail } from "./utils/sendEmail.js";
 
-console.log("Environment Variables:");
-console.log(`PORT: ${process.env.PORT}`);
-console.log(`FRONTEND_URL: ${process.env.FRONTEND_URL}`);
-console.log(`SMTP_HOST: ${process.env.SMTP_HOST}`);
-
 const app = express();
 const router = express.Router();
 
 const corsOptions = {
-  origin: "http://localhost:5175",
+  origin: "https://gymapp-frontend.vercel.app/",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
