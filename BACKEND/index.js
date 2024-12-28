@@ -10,7 +10,7 @@ const corsOptions = {
   origin: "https://gymapp-frontend.vercel.app",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["*"],
+  allowedHeaders: ["Content-Type"],
 };
 
 app.use(cors(corsOptions));
