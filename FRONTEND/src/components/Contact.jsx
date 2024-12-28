@@ -14,7 +14,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/send/mail",
+        "https://gym-app-backend-liard.vercel.app/send/mail",
         {
           name,
           email,
