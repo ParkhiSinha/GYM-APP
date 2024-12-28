@@ -7,7 +7,7 @@ const app = express();
 const router = express.Router();
 
 const corsOptions = {
-  origin: "https://gymapp-frontend.vercel.app/",
+  origin: "https://gymapp-frontend.vercel.app",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
