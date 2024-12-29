@@ -6,15 +6,7 @@ import { sendEmail } from "./utils/sendEmail.js";
 const app = express();
 const router = express.Router();
 
-const corsOptions = {
-  origin: "https://gymapp-frontend.vercel.app",
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type"],
-};
-
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
