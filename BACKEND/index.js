@@ -6,10 +6,14 @@ import { sendEmail } from "./utils/sendEmail.js";
 const app = express();
 const router = express.Router();
 
-app.use(cors());
+app.use(cors())
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.post("/", (req, res) => {
+  res.send("Welcome to Gym App Backend");
+})
 
 app.post("/send/mail", async (req, res) => {
   

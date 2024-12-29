@@ -13,12 +13,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post(
-        "https://gym-app-backend-liard.vercel.app/send/mail",
-        {
-          name,
-          email,
-          message});
+      const { data } = await axios.post( "https://gym-app-backend-liard.vercel.app/send/mail", { name, email, message },{ headers: { "Content-Type": "application/json" } });
       setName("");
       setEmail("");
       setMessage("");
